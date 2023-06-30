@@ -3,6 +3,7 @@ from torchvision import transforms
 import random
 import numpy as np
 from model import Generator
+from super_image import EdsrModel, ImageLoader
 
 
 # Преобразования для черно-белого изображения
@@ -17,7 +18,7 @@ transform_bw = transforms.Compose([
 #функция, чтобы ранее нормализованные изображения отображались корректно
 def reverse_normalize(image, mean_=0.5, std_=0.5):
     if torch.is_tensor(image):
-        image = image.detach().numpy()
+        image = image.detach()
     un_normalized_img = image * std_ + mean_
     un_normalized_img = un_normalized_img * 255
     return np.uint8(un_normalized_img)
@@ -40,6 +41,14 @@ def generate_image(img, path=weights_path):
     with torch.no_grad():
         output_tensor = gen(input_tensor)
         output_tensor = output_tensor.squeeze()
-        output_image = reverse_normalize(output_tensor.permute(1, 2, 0).detach().numpy())
+        output_image = reverse_normalize(output_tensor.permute(1, 2, 0).detach())
 
     return output_image
+
+
+#апскейлинг
+async def get_upscale_image(img):
+    model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=2)
+    inputs = ImageLoader.load_image(img)
+    preds = model(inputs)
+    return preds

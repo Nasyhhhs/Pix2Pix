@@ -12,6 +12,8 @@ from data import generate_image
 import requests
 import numpy as np
 import torchvision.transforms.functional as TF
+from super_image import EdsrModel, ImageLoader
+
 from environs import Env
 
 from config import load_config, Config
@@ -48,6 +50,9 @@ async def process_help_command(message: Message):
 async def process_message(message: Message):
     if message.content_type == ContentType.PHOTO:  #, F.content_type == ContentType.PHOTO
         file_id = message.photo[-1].file_id
+        width = message.photo[-1].width
+        height = message.photo[-1].height
+
         resp = requests.get(URI_INFO + file_id)
 
         img_path = resp.json()['result']['file_path']
@@ -56,9 +61,22 @@ async def process_message(message: Message):
         #new_img = img.filter(ImageFilter.GaussianBlur(radius=50))  # убрать
         new_img = generate_image(img).astype(np.uint8)
         new_img = TF.to_pil_image(new_img)
-        new_img.save(f"files/gen_.jpg")
+        #возвращаем исходный размер
+        new_img.save("files/gen_.jpg")
         #photo =open('files/gen_.jpg', 'rb')
-        photo = FSInputFile(f"files/gen_.jpg")
+
+        #апскейлинг
+        model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=2)
+        #image = Image.open("files/gen_.jpg")
+        inputs = ImageLoader.load_image(new_img)
+        preds = model(inputs)
+
+        #вернем исходный размер
+
+        resized_img  = TF.resize(preds, (height, width))
+        ImageLoader.save_image(resized_img, 'files/scaled_2x.png')
+        ImageLoader.save_compare(inputs, resized_img, 'files/scaled_2x_compare.png')
+        photo = FSInputFile('files/scaled_2x.png')
         #with open('files/gen_.jpg', 'rb') as photo:
         await bot.send_photo(chat_id=message.chat.id, photo=photo)
         #cyber_photo =  process_photo(message.photo[1].file_id)
