@@ -1,21 +1,9 @@
 import asyncio  #чтобы иметь возможность добавить асинхронную функцию main в цикл событий.
-from aiogram.types import BotCommand
+
 from aiogram import Bot, Dispatcher
 from config import Config, load_config
 import user_handlers
-
-async def set_main_menu(bot: Bot):
-
-    # Создаем список с командами и их описанием для кнопки menu
-    main_menu_commands = [
-        BotCommand(command='/help',
-                   description='Справка по работе бота'),
-        BotCommand(command='/support',
-                   description='Поддержка'),
-
-        ]
-
-    await bot.set_my_commands(main_menu_commands)
+from keyboard import set_main_menu
 
 # Функция конфигурирования и запуска бота
 async def main() -> None:

@@ -46,6 +46,10 @@ async def process_help_command(message: Message):
 #async def process_update_command(message: Message):    #просто
   #  await message.answer(message.json(indent=4, exclude_none=True))
 
+@router.message(Command(commands='support'))
+# Этот хэндлер будет срабатывать на команду "/help"
+async def process_help_command(message: Message):
+    await message.answer(text=LEXICON_RU['/support'])
 
 # Этот хэндлер будет срабатывать на любые ваши текстовые сообщения,
 # кроме команд "/start" и "/help"
