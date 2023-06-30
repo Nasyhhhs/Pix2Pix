@@ -1,7 +1,7 @@
 import requests
 import numpy as np
 from aiogram.types import Message
-from aiogram.types import ContentType
+from aiogram.types import ContentType, BotCommand
 from aiogram.types.input_file import FSInputFile
 from aiogram.filters import Command, CommandStart
 from lexicon import LEXICON_RU
@@ -29,6 +29,11 @@ URI = f'https://api.telegram.org/file/bot{API_TOKEN}/'
 
 # Инициализируем роутер уровня модуля
 router: Router = Router()
+
+
+# Создаем асинхронную функцию
+
+
 
 @router.message(CommandStart())
 async def process_start_command(message: Message):
@@ -67,7 +72,7 @@ async def process_message(message: Message):
         # вернем исходный размер
         resized_img = TF.resize(preds, [height, width])
         ImageLoader.save_image(resized_img, 'files/scaled_2x.png')
-        #ImageLoader.save_compare(img, resized_img, 'files/scaled_2x_compare.png')
+        ImageLoader.save_compare(img, resized_img, 'files/scaled_2x_compare.png')
         photo = FSInputFile('files/scaled_2x.png')
 
         await bot.send_photo(chat_id=message.chat.id, photo=photo)
