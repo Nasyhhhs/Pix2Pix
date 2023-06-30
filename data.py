@@ -22,19 +22,19 @@ def reverse_normalize(image, mean_=0.5, std_=0.5):
     un_normalized_img = un_normalized_img * 255
     return np.uint8(un_normalized_img)
 
-
+weights_path = 'weights'
 #Функции для загрузки весов генератора
-def load_gen(path, epoch=54):
+def load_gen(path=weights_path, epoch=54):
     return torch.load(path+f'/Bgen_{epoch}.pth', map_location=torch.device('cpu'))
 
 #функция загрузки и обработки фото генератором
-def generate_image(img, weights_path='weights'):
+def generate_image(img, path=weights_path):
     preprocess = transform_bw
     input_tensor = preprocess(img).unsqueeze(0)
 
     #создаем объект генератора и подгружаем веса
     gen = Generator(in_channels=3, features=64)
-    generator_weights = load_gen(weights_path, epoch=54)
+    generator_weights = load_gen(path)
     gen.load_state_dict(generator_weights)
 
     with torch.no_grad():

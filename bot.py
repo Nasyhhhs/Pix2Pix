@@ -1,8 +1,8 @@
 from aiogram import Bot, Dispatcher
 from aiogram.filters import Command
 from aiogram.types import Message
-from aiogram.types import ContentType, InputFile
-from PIL import Image, ImageFilter
+from aiogram.types import ContentType
+from PIL import Image
 from io import BytesIO
 import io
 import os
