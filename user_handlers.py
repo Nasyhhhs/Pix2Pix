@@ -14,6 +14,11 @@ from aiogram import Bot, Dispatcher
 from config import load_config, Config
 
 from super_image import ImageLoader
+from keyboard import keyboard
+
+from aiogram.types import Message, ContentType, BotCommand, InlineKeyboardButton
+from aiogram.filters import Text
+from aiogram.types import CallbackQuery
 
 # Загружаем конфиг в переменную config
 config: Config = load_config()
@@ -21,6 +26,8 @@ config: Config = load_config()
     # Инициализируем бот и диспетчер
 bot: Bot = Bot(token=config.tg_bot.token)
 dp: Dispatcher = Dispatcher()
+
+
 
 API_TOKEN = config.tg_bot.token
 
@@ -30,14 +37,10 @@ URI = f'https://api.telegram.org/file/bot{API_TOKEN}/'
 # Инициализируем роутер уровня модуля
 router: Router = Router()
 
-
-# Создаем асинхронную функцию
-
-
-
 @router.message(CommandStart())
 async def process_start_command(message: Message):
-    await message.answer(text=LEXICON_RU['/start'])
+    await message.answer(text=LEXICON_RU['/start'],
+                         reply_markup=keyboard)
 
 @router.message(Command(commands='help'))
 # Этот хэндлер будет срабатывать на команду "/help"
@@ -88,3 +91,22 @@ async def process_message(message: Message):
         await message.reply(text=f'Я не отвечаю на "{message.text}" ( ͡❛ ͜ʖ ͡❛)🖕')
     else:
         await message.reply(text=LEXICON_RU['wtf'])
+
+
+# Этот хэндлер будет срабатывать на апдейт типа CallbackQuery
+# с data 'big_button_1_pressed'
+@router.callback_query(Text(text=['big_button_1_pressed']))
+async def process_button_1_press(callback: CallbackQuery):
+    await callback.message.edit_text(
+        text='Ты выбрал Neon!👽',
+        reply_markup=callback.message.reply_markup)
+
+
+# Этот хэндлер будет срабатывать на апдейт типа CallbackQuery
+# с data 'big_button_2_pressed'
+@router.callback_query(Text(text=['big_button_2_pressed']))
+async def process_button_2_press(callback: CallbackQuery):
+    await callback.message.edit_text(
+        text='Ты выбрал Upscale!👾',
+        reply_markup=callback.message.reply_markup)
+
