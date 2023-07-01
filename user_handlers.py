@@ -1,7 +1,6 @@
 import requests
 import numpy as np
-from aiogram.types import Message
-from aiogram.types import ContentType, BotCommand
+import aiogram.types as types
 from aiogram.types.input_file import FSInputFile
 from aiogram.filters import Command, CommandStart
 from lexicon import LEXICON_RU
@@ -44,20 +43,20 @@ async def process_start_command(message: Message):
 
 @router.message(Command(commands='help'))
 # Этот хэндлер будет срабатывать на команду "/help"
-async def process_help_command(message: Message):
+async def process_help_command(message: types.Message):
     await message.answer(text=LEXICON_RU['/help'])
 #async def process_update_command(message: Message):    #просто
   #  await message.answer(message.json(indent=4, exclude_none=True))
 
 @router.message(Command(commands='support'))
 # Этот хэндлер будет срабатывать на команду "/help"
-async def process_help_command(message: Message):
+async def process_help_command(message: types.Message):
     await message.answer(text=LEXICON_RU['/support'])
 
 # Этот хэндлер будет срабатывать на любые ваши текстовые сообщения,
 # кроме команд "/start" и "/help"
 @router.message()
-async def process_message(message: Message):
+async def process_message(message: types.Message):
     if message.content_type == ContentType.PHOTO:  #, F.content_type == ContentType.PHOTO
         file_id = message.photo[-1].file_id
         width = message.photo[-1].width
@@ -86,7 +85,7 @@ async def process_message(message: Message):
         #os.remove('files/scaled_2x.png')
         #return
 
-    elif message.content_type == ContentType.TEXT:
+    elif message.content_type == types.ContentType.TEXT:
         # Обрабатываем текстовые сообщения
         await message.reply(text=f'Я не отвечаю на "{message.text}" ( ͡❛ ͜ʖ ͡❛)🖕')
     else:

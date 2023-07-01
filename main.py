@@ -2,7 +2,8 @@ import asyncio  #чтобы иметь возможность добавить �
 
 from aiogram import Bot, Dispatcher
 from config import Config, load_config
-import user_handlers
+#import user_handlers
+import other_handlers
 from keyboard import set_main_menu
 
 
@@ -18,7 +19,8 @@ async def main() -> None:
     dp.startup.register(set_main_menu)
 
     # Регистриуем роутеры в диспетчере
-    dp.include_router(user_handlers.router)
+    #dp.include_router(user_handlers.router)
+    dp.include_router(other_handlers.router)
 
     # Пропускаем накопившиеся апдейты и запускаем polling
     await bot.delete_webhook(drop_pending_updates=True)
