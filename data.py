@@ -47,8 +47,8 @@ def generate_image(img, path=weights_path):
 
 
 #апскейлинг
-async def get_upscale_image(img):
-    model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=3)
+async def get_upscale_image(img, scale=2):
+    model = EdsrModel.from_pretrained('eugenesiow/edsr-base', scale=scale)
     inputs = ImageLoader.load_image(img)
 
     preds = model(inputs)

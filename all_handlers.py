@@ -102,8 +102,10 @@ async def process_message(message: types.Message):
 
     elif message.content_type == types.ContentType.TEXT:
         # Обрабатываем текстовые сообщения
-        await message.reply(text=f'Я не отвечаю на "{message.text}"')
-
+        await message.reply(text=f'Я не отвечаю на "{message.text}" ( ͡❛ ͜ʖ ͡❛)🖕')
+    else:
+        await message.reply(text=LEXICON_RU['wtf'])
+        
 @router.callback_query(Text(text=['neon', 'upscale']))
 async def process_button_press(callback: CallbackQuery):
     await callback.answer()
@@ -116,7 +118,7 @@ async def process_button_press(callback: CallbackQuery):
         new_img = TF.to_pil_image(new_img)
 
         # кормим еще модели апскейлеру
-        preds = await get_upscale_image(new_img)
+        preds = await get_upscale_image(new_img, scale=2)
         # вернем исходный размер
         resized_img = TF.resize(preds, [shared_data.height, shared_data.width])
         ImageLoader.save_image(resized_img, 'files/neon.png')
@@ -131,11 +133,12 @@ async def process_button_press(callback: CallbackQuery):
         # Обработка фото с помощью Upscale
         # кормим еще модели апскейлеру
         #img = Image.open('files/input.jpg')
-        preds = await get_upscale_image(shared_data.img)
-        ImageLoader.save_image(preds, 'files/scaled_2x.png')
-        photo = FSInputFile('files/scaled_3x.png')
+        scale = 2
+        preds = await get_upscale_image(shared_data.img, scale=2)
+        ImageLoader.save_image(preds, f'files/scaled_{scale}x.png')
+        photo = FSInputFile(f'files/scaled_{scale}x.png')
         # Загружаем изображение с помощью PIL
-        im = Image.open('files/scaled_3x.png')
+        im = Image.open(f'files/scaled_{scale}x.png')
 
         # Получение размера изображения
         image_size = im.size
