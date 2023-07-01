@@ -22,11 +22,11 @@ async def set_main_menu(bot: Bot):
 # Создаем объекты инлайн-кнопок
 big_button_1: InlineKeyboardButton = InlineKeyboardButton(
     text='Neon',
-    callback_data='big_button_1_pressed')
+    callback_data='Neon')
 
 big_button_2: InlineKeyboardButton = InlineKeyboardButton(
     text='Upscale',
-    callback_data='big_button_2_pressed')
+    callback_data='Upscale')
 
 # Создаем объект инлайн-клавиатуры
 inline_keyboard: InlineKeyboardMarkup = InlineKeyboardMarkup(

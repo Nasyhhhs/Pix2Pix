@@ -5,7 +5,6 @@ from config import Config, load_config
 import all_handlers
 from keyboard import set_main_menu
 
-
 async def main() -> None:
     # Загружаем конфиг в переменную config
     config: Config = load_config()

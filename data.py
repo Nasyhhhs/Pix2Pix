@@ -53,3 +53,11 @@ async def get_upscale_image(img, scale=2):
 
     preds = model(inputs)
     return preds
+
+#функция для генерации рандомных чисел определенной длины
+
+def generate_random_number(length):
+    min_value = 10**(length-1)  # Минимальное значение для заданной длины
+    max_value = (10**length) - 1  # Максимальное значение для заданной длины
+    return random.randrange(min_value, max_value)
+
