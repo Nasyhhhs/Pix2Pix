@@ -76,7 +76,6 @@ async def process_message(message: Message):
         # вернем исходный размер
         resized_img = TF.resize(preds, [height, width])
         ImageLoader.save_image(resized_img, 'files/scaled_2x.png')
-        ImageLoader.save_compare(img, resized_img, 'files/scaled_2x_compare.png')
         photo = FSInputFile('files/scaled_2x.png')
 
         await bot.send_photo(chat_id=message.chat.id, photo=photo)
