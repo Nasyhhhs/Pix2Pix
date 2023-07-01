@@ -8,7 +8,7 @@ from super_image import EdsrModel, ImageLoader
 
 # Преобразования для черно-белого изображения
 transform_bw = transforms.Compose([
-    transforms.Resize((256, 256)),
+    transforms.Resize((256, 256), antialias=True),
     transforms.Grayscale(num_output_channels=3),
     transforms.ToTensor(),
     transforms.Normalize(mean=[0.5], std=[0.5])
@@ -41,7 +41,7 @@ def generate_image(img, path=weights_path):
     with torch.no_grad():
         output_tensor = gen(input_tensor)
         output_tensor = output_tensor.squeeze()
-        output_image = reverse_normalize(output_tensor.permute(1, 2, 0).detach())
+        output_image = reverse_normalize(output_tensor.permute(1, 2, 0))
 
     return output_image
 
