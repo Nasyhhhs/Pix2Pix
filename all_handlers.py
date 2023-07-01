@@ -13,7 +13,7 @@ from aiogram import Bot, Dispatcher
 from config import load_config, Config
 
 from super_image import ImageLoader
-from keyboard import keyboard
+from keyboard import inline_keyboard, start_keyboard
 
 from aiogram.types import Message, ContentType, BotCommand, InlineKeyboardButton
 from aiogram.filters import Text
@@ -36,10 +36,24 @@ URI = f'https://api.telegram.org/file/bot{API_TOKEN}/'
 # Инициализируем роутер уровня модуля
 router: Router = Router()
 
+# Этот хэндлер будет срабатывать на команду "/start"
+# и отправлять в чат клавиатуру
+@router.message(CommandStart())
+async def process_start_command(message: Message):
+    await message.answer(text='Привет! Чего ты ждешь, нажимай кнопку!',
+                         reply_markup=start_keyboard)
 
-@router.message(Command(commands='start'))  #CommandStart() |
-async def process_start_command(message: types.Message):
+
+# Этот хэндлер будет срабатывать на ответ START и удалять клавиатуру
+
+@router.message(Text(text='🚀') or Command(commands='/start'))
+async def process_start(message: Message):
     await message.answer(text=LEXICON_RU['/start'])
+
+
+#@router.message(Command(commands='start'))
+#async def process_start_command(message: types.Message):
+   # await message.answer(text=LEXICON_RU['/start'])
 
 @router.message(Command(commands='help'))
 async def process_help_command(message: types.Message):
@@ -59,6 +73,8 @@ class InputImageData:
 
 
 input_image_data = InputImageData()
+
+
 
 
 @router.message()
@@ -86,7 +102,8 @@ async def process_message(message: types.Message):
         #ImageLoader.save_image(img, input_path)
 
         # Отправляем сообщение с вопросом и кнопками
-        await message.answer(text='Фото успешно загружено! Что делать будем?', reply_markup=InlineKeyboardMarkup(inline_keyboard=[
+        await message.answer(text='Фото успешно загружено! Что делать будем?',
+                             reply_markup=InlineKeyboardMarkup(inline_keyboard=[
             [InlineKeyboardButton(text='Neon', callback_data='neon')],
             [InlineKeyboardButton(text='Upscale', callback_data='upscale')]
         ]))
@@ -109,7 +126,7 @@ async def process_button_press(callback: CallbackQuery):
 
     if callback.data == 'neon':
         # Отправляем сообщение пользователю
-        await callback.message.answer(text='Вызов Neon принят! Работаем, шеф!')
+        await callback.message.answer(text='👽')
         # Обработка фото с помощью Neon
         new_img = generate_image(input_image_data.img).astype(np.uint8)
         new_img = TF.to_pil_image(new_img)
@@ -126,7 +143,7 @@ async def process_button_press(callback: CallbackQuery):
 
     elif callback.data == 'upscale':
         # Отправляем сообщение пользователю
-        await callback.message.answer(text='Вызов Upscale принят! Работаем, шеф!')
+        await callback.message.answer(text='👾')
         # Обработка фото с помощью Upscale
         # кормим еще модели апскейлеру
         #img = Image.open('files/input.jpg')

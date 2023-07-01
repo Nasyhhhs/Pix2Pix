@@ -1,6 +1,6 @@
 from aiogram import Bot, types
 from aiogram.types import BotCommand
-from aiogram.types import (CallbackQuery, InlineKeyboardButton,
+from aiogram.types import (CallbackQuery,  ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton,
                            InlineKeyboardMarkup, Message)
 
 
@@ -29,9 +29,17 @@ big_button_2: InlineKeyboardButton = InlineKeyboardButton(
     callback_data='big_button_2_pressed')
 
 # Создаем объект инлайн-клавиатуры
-keyboard: InlineKeyboardMarkup = InlineKeyboardMarkup(
+inline_keyboard: InlineKeyboardMarkup = InlineKeyboardMarkup(
     inline_keyboard=[[big_button_1],
                      [big_button_2]])
 
 
+
+start_button: KeyboardButton = KeyboardButton(text='🚀')
+
+# Создаем объект клавиатуры, добавляя в него кнопки
+start_keyboard: ReplyKeyboardMarkup = ReplyKeyboardMarkup(
+    keyboard=[[start_button]],
+    resize_keyboard=True,
+    one_time_keyboard=True)
 
