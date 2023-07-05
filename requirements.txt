@@ -1,7 +1,6 @@
 aiogram==2.25.1
 environs==9.5.0
 numpy==1.25.0
-Pillow==9.5.0
 Pillow==10.0.0
 Requests==2.31.0
 super_image==0.1.7
