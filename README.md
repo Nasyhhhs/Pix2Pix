@@ -86,10 +86,12 @@ UNet - это сверточная нейронная сеть, изначаль
 ## Примеры
 ![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ad8eadc3-7547-42a3-a9ef-729620b6569d)
 ![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/688ccec7-ac8c-44a3-9780-fc888c26ddb0)
+![photo_5274098373974149997_m (1)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/a734f57a-cb13-4f84-a683-452b7ab14d99)
 
 ![Без названия](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e2e8560d-9ab8-42ec-a33f-b055fec1f088)
-(https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/2f8cfdf8-f6fe-4c16-83dd-c44e410222a0)
-![7_up](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ac46d15a-8757-45db-8424-0f4bf8f146fc)
+![Uploading photo_5274098373974149997_m (1).jpg…]()
+
+
 
 Больше примеров можно найти в папке examples текущего репозитория ::)
 
