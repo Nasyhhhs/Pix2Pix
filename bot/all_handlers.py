@@ -40,7 +40,7 @@ router: Router = Router()
 # и отправлять в чат клавиатуру
 @router.message(CommandStart())
 async def process_start_command(message: Message):
-    await message.answer(text='Привет! Чего ты ждешь, нажимай кнопку!',
+    await message.answer(text='Привет! Давай добавим неона в твои картинки!',
                          reply_markup=start_keyboard)
 
 
