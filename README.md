@@ -12,6 +12,10 @@
 
 
 
+https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/5fee7345-0d9d-44eb-bab5-9b5aafdc0285
+
+
+
 
 ## Сборка датасета
 Моя идея состояла в том, чтобы экспериментировать с нестандартным подходом к раскраске изображений, а не просто переводить черно-белые снимки в цветные. Я хотела, чтобы обычные фотографии заиграли сочными неоновыми переливами как в киберпанк-играх. Именно они послужили источником вдохновения для моей цветовой гаммы.
@@ -92,6 +96,10 @@ UNet - это сверточная нейронная сеть, изначаль
 ![7](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/a80040da-affd-4fe1-a45c-9fc9459ab944)
 
 ![7](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b523d3f7-d97a-46f6-80cb-4effa538b825)
+
+![images (2)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e4bfa30b-34b1-457c-af92-bfa0ae2871b9)
+
+![photo_5274098373974150072_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/9e703f76-7bfd-4c55-b9f7-244e5d3d5a13)
 
 
 Больше примеров можно найти в папке examples текущего репозитория ::)
