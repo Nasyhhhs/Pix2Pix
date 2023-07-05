@@ -58,7 +58,7 @@ UNet - это сверточная нейронная сеть, изначаль
 
 Результаты, полученные на разных эпохах:
 
-![Без названия (3)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/bbeb46f8-2e98-47ff-baaf-b2a26268542d)
+
 ![epochs](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/fb6ad192-539c-4ac5-b422-28e036754a15)
 ![learning_curve](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/0e33b293-2f49-48d6-baef-56b7d5c9b4bd)
 
@@ -90,8 +90,6 @@ UNet - это сверточная нейронная сеть, изначаль
 ![Без названия](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e2e8560d-9ab8-42ec-a33f-b055fec1f088)
 (https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/2f8cfdf8-f6fe-4c16-83dd-c44e410222a0)
 ![7_up](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ac46d15a-8757-45db-8424-0f4bf8f146fc)
-![4](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/d47d4c0d-e514-469f-b920-fe27faf34762)
-![4](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/844d5564-166e-4c79-a5ff-66645d1d218b)
 
 Больше примеров можно найти в папке examples текущего репозитория ::)
 
