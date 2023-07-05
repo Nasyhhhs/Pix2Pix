@@ -85,11 +85,16 @@ UNet - это сверточная нейронная сеть, изначаль
 
 ## Примеры
 ![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ad8eadc3-7547-42a3-a9ef-729620b6569d)
-![2_up](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/75ed52b3-d0c9-410b-9aa3-5fb046f64ead)
+![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/688ccec7-ac8c-44a3-9780-fc888c26ddb0)
+
 ![Без названия](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e2e8560d-9ab8-42ec-a33f-b055fec1f088)
-![photo_5274098373974149997_m](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/2f8cfdf8-f6fe-4c16-83dd-c44e410222a0)
+(https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/2f8cfdf8-f6fe-4c16-83dd-c44e410222a0)
+![7_up](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ac46d15a-8757-45db-8424-0f4bf8f146fc)
+![4](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/d47d4c0d-e514-469f-b920-fe27faf34762)
+![4](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/844d5564-166e-4c79-a5ff-66645d1d218b)
 
 Больше примеров можно найти в папке examples текущего репозитория ::)
+
 
 
 
