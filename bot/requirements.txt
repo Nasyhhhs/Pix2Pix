@@ -1,8 +1,14 @@
-aiogram==2.25.1
+aiogram== 3.0.0b6
 environs==9.5.0
 numpy==1.25.0
 Pillow==10.0.0
 Requests==2.31.0
 super_image==0.1.7
+typing-extensions==4.7.1
 torch==2.0.1
 torchvision==0.15.2
+urllib3==2.0.3
+huggingface-hub==0.16.2
+#wheel==0.36.2
+opencv-contrib-python == 4.8.0.74
+#pip==23.1.2
