@@ -205,7 +205,7 @@ PS Я считаю, что мой алгоритм действий был не�
 
 ![7](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b523d3f7-d97a-46f6-80cb-4effa538b825)
 
-![images (2)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e4bfa30b-34b1-457c-af92-bfa0ae2871b9)
+
 
 ![images](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/3a420d1a-fe1d-41b4-8342-9a142c06a352)
 
@@ -215,6 +215,8 @@ PS Я считаю, что мой алгоритм действий был не�
 ![photo_5274098373974150072_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/9e703f76-7bfd-4c55-b9f7-244e5d3d5a13)
 
 ![IkMBYiSp93g](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/81b4667a-f933-4dcb-a47d-be20e4807ff0)
+
+![images (2)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e4bfa30b-34b1-457c-af92-bfa0ae2871b9)
 
 ![photo_5280592231381715320_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/695e9afc-d49a-4516-84c4-aae75a31cb37)
 
