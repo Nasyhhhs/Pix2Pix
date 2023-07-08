@@ -207,6 +207,11 @@ PS Я считаю, что мой алгоритм действий был не�
 
 ![images (2)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/e4bfa30b-34b1-457c-af92-bfa0ae2871b9)
 
+![photo_5280714698079194329_y](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b404a5b1-729f-44a6-9412-c98ad5b2ccc6)
+
+![photo_5280592231381715273_y](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/79f2972a-9291-4818-a134-908f717f630e)
+
+
 ![photo_5274098373974150072_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/9e703f76-7bfd-4c55-b9f7-244e5d3d5a13)
 
 
