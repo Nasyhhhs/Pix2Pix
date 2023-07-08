@@ -200,7 +200,9 @@ PS Я считаю, что мой алгоритм действий был не�
 ![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/ad8eadc3-7547-42a3-a9ef-729620b6569d)
 ![2](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/688ccec7-ac8c-44a3-9780-fc888c26ddb0)
 
+![photo_5282844031195400452_m](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/2066909c-264b-4216-b708-b7a24311f99b)
 
+![photo_5282844031195400454_m](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b4052756-daa5-46b6-a7a8-922240b90b01)
 
 ![7](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/a80040da-affd-4fe1-a45c-9fc9459ab944)
 
