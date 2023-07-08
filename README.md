@@ -1,7 +1,7 @@
 # Pix2Pix + SuperResolution Telegram Bot 
 
 
-Данный проект выполнен в качестве итогового проекта обучения на курсе “Deep Learning -Продвинутый поток” от МФТИ. 
+Данный проект выполнен в качестве итогового проекта обучения на курсе "Deep Learning-Продвинутый поток" 2023 - Школы глубокого обучения ФПМИ МФТИ. 
 Выполнение его включало три этапа:
 - Генерация собственного датасета
 - Выбор архитектуры модели и ее обучение
@@ -23,6 +23,7 @@ https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/5fee7345-0d9d-
 ![ds](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/f69c4e76-64b3-4de5-bed4-1a3e12cd560d)
 
 Код, который я использовала находится в папке dataset. 
+Сам датасет доступен в моем профиле на kaggle[https://www.kaggle.com/datasets/animanoirr/cyberpunk]
 
 ## Архитектура Pix2Pix
 ![2023-07-05_150708](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/c7b0f2ac-c2d5-429f-b8a3-b07f81746127)
