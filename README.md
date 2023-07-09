@@ -228,8 +228,12 @@ PS Я считаю, что мой алгоритм действий был не�
 
 ![photo_5274098373974150072_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/9e703f76-7bfd-4c55-b9f7-244e5d3d5a13)
 
+![photo_5285499888647393373_m](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/7ed4b22c-fa9f-4781-bdb9-2b505d6fab56)
 
+![photo_5285499888647393376_x](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b034266b-7f0d-426d-8292-27a070e1c82d)
+![photo_5285499888647393265_y](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/f7ecb290-9a49-4466-b6cf-120675298299)
 
+![photo_5285499888647393370_y](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/8706d068-96ab-4079-a596-bb6832806738)
 
 Больше примеров можно найти в папке examples текущего репозитория ::)
 
