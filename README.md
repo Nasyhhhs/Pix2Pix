@@ -86,28 +86,7 @@ UNet - это сверточная нейронная сеть, изначаль
 
 ## Упаковка Docker контейнера
 
-### Создание образа
 
--Создание Dockerfile и docker-compose.yml (requirements.txt если еще не создан, а также файл .dockerignore)
-
-PS: текущий репозиторий не содержит файлов для сборки контейнера,  репозиторий с внесенными изменениями для упаковки контейнера можно найти также выложенном у меня на гитхабе *fantastic-octopus-bot*
-
-
--Сборка образа:
-
-Нужно перейти в директорию проекта в терминале и выполните следующую команду:
-
-`docker build -t <имя_образа> .`
-
-
-![2023-07-08_121557](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/0c27f6f9-b4b4-41fe-835a-9cd2f1bb9ecc)
-
-
-Проверить, появился ли образ можно командой `docker images`
-
--Запуск Docker-контейнера: 
-
-`docker run -d --name your-container-name your-image-name`
 
 ![eeee](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/93dc9f73-7485-41b1-8301-376abb35d47b)
 
