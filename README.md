@@ -54,12 +54,12 @@ UNet - это сверточная нейронная сеть, изначаль
 Оптимизация генератора происходит путем минимизации разницы между сгенерированными изображениями и целевыми изображениями с использованием функции потерь (BCEWithLogitsLoss() и L1Loss()).
 Таким образом, генератор на основе UNet в архитектуре Pix2Pix способен преобразовывать входные изображения в соответствующие выходные изображения с сохранением деталей и структуры, что отлично подходит для переноса цветовой схемы.
 
+![Без названия (1)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/035a22b0-5cb1-4720-a175-a2c6b2848da2)
 
-![2023-07-05_165337](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/007340f5-0d92-4803-ac1d-66038e9c90eb)
+![Без названия](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/5a72e63a-be7b-4ed7-8d5c-a3298795f41b)
 
-![2023-07-05_165219](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/b522e942-d751-45b8-b12e-8b9c9032afcb)
 
-![2023-07-05_165316](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/4db07c82-6709-45bd-9a51-5e013ccd10c5)
+![Без названия (5)](https://github.com/Nasyhhhs/Pix2Pix-superRes-bot/assets/109277211/714ec08e-a984-4bcd-b04c-da61e2e82e33)
 
 Результаты, полученные на разных эпохах:
 
