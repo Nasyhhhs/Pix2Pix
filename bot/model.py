@@ -1,11 +1,12 @@
 import torch
 import torch.nn as nn
 
-
-#import numpy as np
-#from torchvision.utils import make_grid, save_image
+# import numpy as np
+# from torchvision.utils import make_grid, save_image
 import os
-#from PIL import Image
+
+
+# from PIL import Image
 
 
 class Block(nn.Module):
@@ -95,15 +96,4 @@ class Generator(nn.Module):
         up7 = self.up7(torch.cat([up6, d2], 1))
         return self.final_up(torch.cat([up7, d1], 1))
 
-
-
 #
-
-
-
-
-
-
-
-
-

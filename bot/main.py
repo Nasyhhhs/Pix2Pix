@@ -26,5 +26,6 @@ async def main() -> None:
 
 
 if __name__ == '__main__':
+    print('Neon Bot have been started!')
     # Регистрируем асинхронную функцию в диспетчере,которая будет выполняться на старте бота,
     asyncio.run(main())

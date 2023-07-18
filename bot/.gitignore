@@ -2,5 +2,4 @@
 .mypy_cache/
 venv/
 __pycache__/
-files/gen_.jpg
-weights/
+
